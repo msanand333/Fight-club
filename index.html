@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tribute page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="controller.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="text-center" ng-app="myApp" ng-controller="controller_1">
+        <h1>{{topContent.heading}}</h1>
+        <h3>{{topContent.subheading1}}</h3>
+        <img ng-src="{{topContent.img_url}}" />
+        <h3>{{topContent.subheading2}}</h3>
+        <ul ng-repeat="item in quotes">
+            <li>{{item.quote}}</li>
+        </ul>
+        <h5>{{topContent.subheading3}}
+            <a ng-href="{{topContent.quotes_url}}" target="blank">here</a>
+        </h5>
+    </div>
+</body>
+
+</html>
